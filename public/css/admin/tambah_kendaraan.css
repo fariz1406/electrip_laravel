@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #121212;
+}
+
+.container {
+  width: 80%;
+  margin: 20px 10%;
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  padding: 30px;
+  font-size: 3vh;
+  border: 2px solid black;
+  box-shadow: 1px 1px 10px white;
+}
+
+.container h2 {
+  font-size: 5vh;
+  text-decoration: underline;
+  margin-bottom: 30px;
+  text-shadow: 1px 2px 5px #ffcc00;
+  text-align: center;
+}
+
+.wrapper-kiri {
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+/* .wrapper-kiri input[type="text"]{
+  width: 100%;
+} */
+
+.wrapper-kanan {
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: flex-end;
+  /* margin: auto; */
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.wrapper-kanan input[type="number"],input[type="text"]{
+  width: 40vh;
+  
+}
+
+.input-kategori{
+  display: block;
+}
+
+select {
+  text-align: center;
+  font-size: 2vh;
+}
+
+.input-foto img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #474747;
+  z-index: 9999999999;
+  
+}
+
+.input-nama{
+  margin: auto;
+}
+/* .input-foto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+} */
+
+.input-deskripsi textarea {
+  background: #ffffff;
+  border: #6e6767;
+  outline: none;
+  border-radius: 11px;
+  color: #0c0c0c;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 50em;
+}
+
+.input-harga input {
+  border: 2px solid black;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.input-harga .harga {
+  width: 12%;
+}
+
+.input-desain {
+  width: 30%;
+  border: 2px solid black;
+  height: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.input-stnk{
+  display: block;
+  margin-bottom: 30px;
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.container button {
+  width: 130px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: large;
+}
+
+.batal {
+  background-color: #f0f0f0;
+}
+
+.simpan {
+  background-color: #ffcc00;
+}
+
+.batal:hover {
+  background-color: red;
+}
+
+.simpan:hover {
+  background-color: yellow;
+}
+
+/* pesan peringatan */
+.pesan-peringatan {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffcc00;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 0;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+/* batas pesan peringatan */

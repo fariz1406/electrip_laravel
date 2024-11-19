@@ -1,0 +1,210 @@
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+body {
+
+}
+
+.container {
+  position: absolute;
+  left: 65%;
+  top: 50%;
+  border-radius: 30px;
+  padding: 50px;
+  width: 430px;
+  transform: translate(-50%, -50%);
+  background: rgb(21, 20, 20);
+  color: #fff;
+  height: 460px;
+  margin-top: 50px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 10px black;
+}
+.container p {
+ margin-left: 23%;
+
+}
+.container p a {
+  color: #ffffff;
+}
+.lupa {
+  margin-left: 82%;
+  font-size: small;
+  color: #ffffff;
+}
+
+.input1 {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+}
+.input1 input {
+  height: 30px;
+  width: 88%;
+  background: #333;
+  border: #fff;
+  outline:none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+.input1 label {
+      position: absolute;
+      left: 20px;
+      top: 25%;
+      transform: translateY(-40%);
+      font-size: 1rem;
+      pointer-events: none;
+      color: #8c8c8c;
+      transition: all 0.1s ease;
+}
+
+.input1 input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.input1 input:is(:focus, :valid)~label {
+  font-size: 0.75rem;
+  transform: translateY(-95%);
+}
+.input2 {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+
+}
+.input2 input {
+  height: 30px;
+  width: 88%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+.input2 label {
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+.input2 input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.input2 input:is(:focus, :valid)~label {
+  font-size: 0.75rem;
+  transform: translateY(-95%);
+}
+
+.input3 {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+
+}
+.input3 input {
+  height: 30px;
+  width: 88%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+.input3 label {
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+.input3 input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.input3 input:is(:focus, :valid)~label {
+  font-size: 0.75rem;
+  transform: translateY(-95%);
+}
+
+.input4 {
+  position: relative;
+  height: 50px;
+  margin-bottom: 16px;
+
+}
+.input4 input {
+  height: 30px;
+  width: 88%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+.input4 label {
+  position: absolute;
+  left: 20px;
+  top: 25%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+.input4 input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.input4 input:is(:focus, :valid)~label {
+  font-size: 0.75rem;
+  transform: translateY(-95%);
+}
+
+.container button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  background: #FFCC00;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: 10px 0 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+  place-content: center;
+}
+button:hover{
+  background: #d3aa08;
+}
+
+img {
+ position: relative;
+ right: 250px;
+}
+h1 {
+  font-weight: 500;
+  font-size: 50px;
+}

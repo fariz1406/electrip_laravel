@@ -1,0 +1,198 @@
+* {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #121212;
+}
+
+
+.container {
+  width: 70%;
+  height: auto;
+  background-color: #333333;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 10px white;
+  
+}
+.wrapper2 {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #ffcc00;
+}
+
+.image-box {
+  height: 230px;
+  width: 230px;
+  margin-left: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  margin-top: 10px;
+  border: 2px solid black;
+}
+
+.wrapper2 .isi-teks {
+  display: block;
+  text-align: left;
+  height: auto;
+}
+
+.wrapper-isi-teks {
+  width: 50%;
+  margin-left: 25%;
+  display: block;
+  
+  text-align: left;
+}
+
+.container .wrapper2 h3 {
+  margin-top: -186px;
+  font-size: 37px;
+}
+.container .wrapper2 h4 {
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.wrapper-input {
+  display: flex;
+  justify-content: center;
+}
+
+
+.pembayaran{
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px;
+}
+
+.input-textarea {
+  border-radius: 15px;
+}
+
+.areatext{
+  display: flex;
+  gap: 30px;
+}
+
+.areatext textarea{
+  border-radius: 10px;
+}
+
+.container .pesan textarea::placeholder {
+  font-family: "Trebuchet MS";
+  color: #000000;
+  
+}
+.Button {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-left: 78%;
+  gap: 10%;
+  align-items: end;
+}
+
+.Button .simpan {
+  width: 200px;
+  height: 45px;
+  background-color: #ffcc00;
+  border: 1px solid black;
+  color: #0c0c0c;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.Button .batal {
+  width: 200px;
+  height: 45px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: #0c0c0c;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.Button .simpan:hover {
+  background-color: yellow;
+}
+.Button .batal:hover {
+  background-color: red;
+}
+
+/* inputan datetime */
+#datetime-design {
+  width: 42%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+input[type="datetime-local"] {
+  font-size: 22px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.input-design {
+  width: 42%;
+  height: 40px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* pesan peringatan */
+.pesan-peringatan {
+  width: 50%;
+  padding: 20px;
+  background-color: #ffcc00;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 0;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+/* batas pesan peringatan */
+
+::placeholder {
+  font-size: 2.5vh;
+  color: black;
+  margin-left: 10px;
+}
