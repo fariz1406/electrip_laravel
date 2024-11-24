@@ -18,12 +18,8 @@
       <ul>
         <a href="{{route('pesanan.belumDibayar')}}"><li><h2>belum dibayar</h2></li></a>
         <a href="{{route('pesanan.diProses')}}"><li><h2>di proses</h2></li></a>
-        <a href=""><li><h2>di kirim</h2></li></a>
-        <a href="pesanan-dipakai.php">
-          <li>
-            <h2>di pakai</h2>
-          </li>
-        </a>
+        <a href="{{route('pesanan.diKirim')}}"><li><h2>di kirim</h2></li></a>
+        <a href="{{route('pesanan.diPakai')}}"><li><h2>di pakai</h2></li></a>
         <a href="pesanan-selesai.php">
           <li>
             <h2>Riwayat</h2>

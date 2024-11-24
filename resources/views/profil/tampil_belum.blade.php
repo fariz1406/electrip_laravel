@@ -27,11 +27,7 @@
       <div class="input1">
         <p>{{ $user->name }}</p>
       </div>
-
-      <div class="input2">
-        <p>085211451129</p>
-      </div>
-
+      
       <div class="input3">
         <p>belum buat profil</p>
       </div>

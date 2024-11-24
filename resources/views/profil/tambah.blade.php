@@ -27,7 +27,7 @@
       </div>
 
       <div class="input1">
-        <input type="text" placeholder="nama pengguna" required />
+      <input type="text" placeholder="nama pengguna" value="{{ Auth::user()->name }}" readonly />
       </div>
 
       <div class="input2">

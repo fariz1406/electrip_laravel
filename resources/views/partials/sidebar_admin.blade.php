@@ -176,9 +176,7 @@
         <li>
           <a href="/kendaraan"><span>Kendaraan</span></a>
         </li>
-        <li>
-          <a href="/pesanan/pesananData"><span>Pesanan</span></a>
-        </li>
+        <li><a href="{{route('pesanan.data')}}">Pesanan</a></li>
         <li>
           <a href="validasi"><span> Verifikasi</span></a>
         </li>

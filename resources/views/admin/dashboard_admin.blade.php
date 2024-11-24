@@ -16,27 +16,23 @@
         <div class="info-cards">
             <div class="card">
                 <h3>Jumlah Mobil</h3>
-                <p></p>
-            </div>
-            <div class="card">
-                <h3>Jumlah Motor</h3>
-                <p></p>
-            </div>
-            <div class="card">
-                <h3>Jumlah Pesanan</h3>
-                <p></p>
-            </div>
-            <div class="card">
-                <h3>Pesanan Selesai</h3>
-                <p></p>
+                <p>{{ $jumlahMobil }}</p>
             </div>
             <div class="card">
                 <h3>Jumlah Pengguna</h3>
-                <p></p>
+                <p>{{ $jumlahUser }}</p>
             </div>
             <div class="card">
-                <h3>Jumlah Penyedia</h3>
-                <p></p>
+                <h3>Jumlah Motor</h3>
+                <p>{{ $jumlahMotor }}</p>
+            </div>
+            <div class="card">
+                <h3>Jumlah Pesanan</h3>
+                <p>{{ $jumlahPesanan }}</p>
+            </div>
+            <div class="card">
+                <h3>Pesanan Selesai</h3>
+                <p>{{ $jumlahPesananRiwayat }}</p>
             </div>
         </div>
     </div>

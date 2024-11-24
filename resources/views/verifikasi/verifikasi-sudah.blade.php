@@ -116,9 +116,9 @@
     @include('partials.sidebar')
 
 @if($dataAda && $dataAda->validasi == 'setuju')
-    <p class="verif">Anda sudah terverifikasi!</p>
+    <p class="verif">Akun anda sudah terverifikasi</p>
 @elseif($dataAda)
-    <p class="verif">Verifikasi Anda sudah lengkap dan tidak dapat diubah. Mohon menunggu untuk diverifikasi</p>
+    <p class="verif">Anda sudah melakukan verifikasi. Mohon menunggu Admin untuk menyetujui</p>
 @else
     <form action="{{ route('verifikasi.store') }}" method="post" enctype="multipart/form-data">
         @csrf

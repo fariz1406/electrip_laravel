@@ -190,13 +190,13 @@
       <ul>
         <li class="settings">Pengaturan</li>
         <li>
-          <a href="profil"><span>Profil</span> </a>
+          <a href="{{ route('profil.tampil') }}"><span>Profil</span> </a>
         </li>
         <li>
           <a href="{{ route('pesanan.belumDibayar') }}"><span> Pesanan Saya</span></a>
         </li>
         <li>
-          <a href="/Verifikasi/User"><span> Verifikasi</span></a>
+          <a href="{{ route('verifikasi.index') }}"><span> Verifikasi</span></a>
         </li>
         <li class="settings2"><span>Lainnya </span></li>
         <li>

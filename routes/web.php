@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardAdminController;
 use App\Http\Controllers\KendaraanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pesananController;
@@ -34,6 +35,8 @@ Route::middleware('auth', 'pengguna')->group(function () {
     Route::post('/pesanan/submit/{id}', [pesananController::class, 'submit'])->name('pesanan.submit');
     Route::get('/pesanan/belumDibayar', [pesananController::class, 'belumDibayar'])->name('pesanan.belumDibayar');
     Route::get('/pesanan/diProses', [pesananController::class, 'diProses'])->name('pesanan.diProses');
+    Route::get('/pesanan/diKirim', [pesananController::class, 'diKirim'])->name('pesanan.diKirim');
+    Route::get('/pesanan/diPakai', [pesananController::class, 'diPakai'])->name('pesanan.diPakai');
 
     Route::get('/profil', [ProfilController::class, 'checkProfil'])->name('profil.tampil');
     Route::get('/profil/tambah', [ProfilController::class, 'tambah'])->name('profil.tambah');
@@ -50,9 +53,7 @@ Route::middleware('auth', 'pengguna')->group(function () {
 Route::middleware('auth', 'admin')->group(function () {
     //admin
 
-    Route::get('/admin/dashboard', function () {
-        return view('/admin/dashboard_admin');
-    })->name('/admin/dashboard');
+    Route::get('/admin/dashboard', [DashboardAdminController::class, 'jumlah'])->name('admin.dashboard');
 
     Route::get('/admin/userData', function () {
         return view('/admin/data_user');
@@ -65,10 +66,7 @@ Route::middleware('auth', 'admin')->group(function () {
     Route::post('/kendaraan/update/{id}', [KendaraanController::class, 'update'])->name('kendaraan.update');
     Route::get('/kendaraan/delete/{id}', [KendaraanController::class, 'delete'])->name('kendaraan.delete');
 
-    Route::get('/admin/pesananData', function () {
-        return view('/admin/data_pesanan');
-    })->name('/admin/pesananData');
-
+    Route::get('/admin/pesananData', [pesananController::class, 'tampil'])->name('pesanan.data');
 
     Route::get('admin/validasi', [validasiVerif::class, 'index'])->name('validasi.verifikasi');
     Route::get('admin/validasi/{id}', [validasiVerif::class, 'show'])->name('validasi.verifikasi.detail');
