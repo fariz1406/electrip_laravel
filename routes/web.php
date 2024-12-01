@@ -11,7 +11,7 @@ use App\Http\Controllers\VerifikasiUser;
 use App\Models\Profil;
 
 Route::get('/testing', function () {
-    return view('welcome');
+    return view('testing');
 });
 
 Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -30,6 +30,7 @@ Route::middleware('auth', 'pengguna')->group(function () {
 
     Route::get('/pilihan', [KendaraanController::class, 'pilihan'])->name('pilihan');
     Route::get('/pilihanMotor', [KendaraanController::class, 'pilihanMotor'])->name('pilihanMotor');
+
 
     Route::get('/pesanan/checkout/{id}', [pesananController::class, 'checkout'])->name('pesanan.checkout');
     Route::post('/pesanan/submit/{id}', [pesananController::class, 'submit'])->name('pesanan.submit');

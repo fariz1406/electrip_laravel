@@ -152,6 +152,13 @@ input[type="datetime-local"] {
   text-transform: uppercase;
 }
 
+input[type="date"] {
+  font-size: 22px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
 .input-design {
   width: 42%;
   height: 40px;
