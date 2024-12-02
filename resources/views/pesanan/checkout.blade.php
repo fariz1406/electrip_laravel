@@ -12,7 +12,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f6f9;
+      background-color: #121212;
     }
 
     .container {
@@ -28,7 +28,7 @@
 
     .form-section {
       flex: 1;
-      background-color: #1976d2;
+      background-color: gray;
       color: white;
       padding: 30px;
     }
@@ -81,7 +81,7 @@
     .details-section {
       flex: 1;
       padding: 30px;
-      background-color: #f4f4f4;
+      background-color: #FFCC00;
       text-align: center;
     }
 
@@ -120,7 +120,6 @@
   <div class="container">
     <!-- Form Input Section -->
     <div class="form-section">
-      <h1>Form Pemesanan Kendaraan</h1>
       <form action="" method="POST">
         @csrf
         <!-- Tanggal dan Waktu Mulai -->
