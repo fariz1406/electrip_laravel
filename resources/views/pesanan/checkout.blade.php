@@ -6,17 +6,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pemesanan Kendaraan</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdmfOHSWTdGQ3rz5c70Usj-L6TAScrCy0&callback=initMap" async defer></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f6f9;
+      background-color: #121212;
     }
 
     .container {
-      padding-top: 50px;
+      padding-top: 30px;
       display: flex;
       max-width: 1200px;
       margin: 20px auto;
@@ -28,7 +29,7 @@
 
     .form-section {
       flex: 1;
-      background-color: #1976d2;
+      background-color: #2b2b2b;
       color: white;
       padding: 30px;
     }
@@ -67,7 +68,7 @@
       padding: 10px;
       font-size: 16px;
       color: white;
-      background: #ffa500;
+      background: #ffcc00;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -81,7 +82,7 @@
     .details-section {
       flex: 1;
       padding: 30px;
-      background-color: #f4f4f4;
+      background-color: #ffcc00;
       text-align: center;
     }
 
@@ -117,11 +118,10 @@
 
 <body>
   @include('partials.navbar')
-  <div class="container">
+  <div class="container">       
     <!-- Form Input Section -->
     <div class="form-section">
-      <h1>Form Pemesanan Kendaraan</h1>
-      <form action="" method="POST">
+      <form action="{{ route('pesanan.submit', $id) }}" method="POST">
         @csrf
         <!-- Tanggal dan Waktu Mulai -->
         <div class="form-group">
@@ -132,13 +132,13 @@
         <!-- Tanggal Selesai -->
         <div class="form-group">
           <label for="tanggal_selesai">Tanggal Selesai Sewa</label>
-          <input type="date" id="tanggal_selesai" name="tanggal_selesai" class="form-control" required>
+          <input type="datetime-local" id="tanggal_selesai" name="tanggal_selesai" class="form-control" required>
         </div>
 
         <!-- Lokasi Penjemputan -->
         <div class="form-group">
-          <label for="lokasi_penjemputan">Lokasi Penjemputan</label>
-          <input type="text" id="lokasi_penjemputan" name="lokasi_penjemputan" class="form-control" placeholder="Pilih lokasi di peta" readonly required>
+          <label for="lokasi">Lokasi</label>
+          <input type="text" id="lokasi" name="lokasi" class="form-control" placeholder="Pilih lokasi di peta" readonly required>
           <div id="map"></div>
           <input type="hidden" id="latitude" name="latitude">
           <input type="hidden" id="longitude" name="longitude">
@@ -165,68 +165,64 @@
   </div>
 
   <script>
-    let map, marker;
+    const map = L.map('map').setView([-6.973040, 107.630895], 15); // Pusat peta
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+    }).addTo(map);
 
-    function initMap() {
-      // Inisialisasi Map
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: {
-          lat: -6.200000,
-          lng: 106.816666
-        }, // Lokasi default (Jakarta)
-        zoom: 13,
-      });
+    let marker;
+    map.on('click', function(e) {
+      const {
+        lat,
+        lng
+      } = e.latlng;
+      if (marker) {
+        marker.setLatLng([lat, lng]);
+      } else {
+        marker = L.marker([lat, lng]).addTo(map);
+      }
 
-      // Marker Default
-      marker = new google.maps.Marker({
-        position: {
-          lat: -6.200000,
-          lng: 106.816666
-        },
-        map: map,
-        draggable: true,
-      });
+      document.getElementById('latitude').value = lat;
+      document.getElementById('longitude').value = lng;
 
-      // Event Listener Saat Map Diklik
-      map.addListener("click", (event) => {
-        const latLng = event.latLng;
-        placeMarker(latLng);
-        geocodeLatLng(latLng);
-      });
-
-      // Event Listener Drag pada Marker
-      marker.addListener("dragend", (event) => {
-        const latLng = event.latLng;
-        geocodeLatLng(latLng);
-      });
-    }
-
-    function placeMarker(location) {
-      marker.setPosition(location);
-      map.panTo(location);
-    }
-
-    function geocodeLatLng(latLng) {
-      const geocoder = new google.maps.Geocoder();
-
-      geocoder.geocode({
-        location: latLng
-      }, (results, status) => {
-        if (status === "OK") {
-          if (results[0]) {
-            const alamat = results[0].formatted_address;
-            document.getElementById("lokasi_penjemputan").value = alamat;
-            document.getElementById("latitude").value = latLng.lat();
-            document.getElementById("longitude").value = latLng.lng();
-          } else {
-            alert("Alamat tidak ditemukan");
-          }
-        } else {
-          alert("Geocoder gagal: " + status);
-        }
-      });
-    }
+      fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('lokasi').value = data.display_name;
+        });
+    });
   </script>
+<script>
+    document.getElementById('tanggal_mulai').addEventListener('change', function () {
+        const startDateInput = document.getElementById('tanggal_mulai');
+        const endDateInput = document.getElementById('tanggal_selesai');
+
+        // Ambil nilai dari tanggal_mulai
+        const startDate = new Date(startDateInput.value);
+
+        // Jika tanggal_selesai belum diisi, atau ingin diatur ulang
+        if (!endDateInput.value) {
+            const endDate = new Date(startDate);
+            endDate.setDate(startDate.getDate() + 1); // Tambahkan 1 hari
+            endDateInput.value = formatDateTimeLocal(endDate); // Format sesuai input datetime-local
+        } else {
+            const endDate = new Date(endDateInput.value);
+            endDate.setFullYear(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+            endDate.setHours(startDate.getHours());
+            endDate.setMinutes(startDate.getMinutes());
+            endDateInput.value = formatDateTimeLocal(endDate);
+        }
+    });
+
+    // Fungsi untuk memformat tanggal ke format datetime-local
+    function formatDateTimeLocal(date) {
+        const offset = date.getTimezoneOffset() * 60000; // Offset dalam milidetik
+        const adjustedDate = new Date(date - offset); // Sesuaikan waktu berdasarkan timezone
+        return adjustedDate.toISOString().slice(0, 16); // Format ke datetime-local (YYYY-MM-DDTHH:mm)
+    }
+</script>
+
+
 </body>
 
 </html>
