@@ -17,10 +17,13 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Kendaraan::class);
             $table->foreignIdFor(User::class);
-            $table->text('pesan')->nullable();
-            $table->dateTime('waktu')->nullable();
+            $table->dateTime('tanggal_mulai')->nullable();
+            $table->dateTime('tanggal_selesai')->nullable();
             $table->string('lokasi')->nullable();
+            $table->decimal('latitude', 10, 8);  // Latitude
+            $table->decimal('longitude', 11, 8); // Longitude
             $table->decimal('biaya', 10, 0)->nullable();
+            $table->text('pesan')->nullable();
             $table->enum('status', ['belum_dibayar', 'diproses', 'dikirim', 'dipakai', 'selesai'])->default('belum_dibayar');
             $table->timestamps();
         });

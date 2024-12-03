@@ -52,7 +52,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             if (Auth::user()->role == 'admin') {
-                return redirect()->route('/admin/dashboard', compact('dataAda'));
+                return redirect()->route('admin.dashboard', compact('dataAda'));
             } else {
                 return redirect()->route('beranda', compact('dataAda'));
             }
