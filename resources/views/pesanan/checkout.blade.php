@@ -29,11 +29,7 @@
 
     .form-section {
       flex: 1;
-<<<<<<< HEAD
-      background-color: gray;
-=======
       background-color: #2b2b2b;
->>>>>>> fariz
       color: white;
       padding: 30px;
     }
@@ -86,11 +82,7 @@
     .details-section {
       flex: 1;
       padding: 30px;
-<<<<<<< HEAD
-      background-color: #FFCC00;
-=======
       background-color: #ffcc00;
->>>>>>> fariz
       text-align: center;
     }
 
@@ -129,11 +121,7 @@
   <div class="container">       
     <!-- Form Input Section -->
     <div class="form-section">
-<<<<<<< HEAD
-      <form action="" method="POST">
-=======
       <form action="{{ route('pesanan.submit', $id) }}" method="POST">
->>>>>>> fariz
         @csrf
         <!-- Tanggal dan Waktu Mulai -->
         <div class="form-group">
