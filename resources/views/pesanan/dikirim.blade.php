@@ -18,7 +18,7 @@
       <ul>
         <a href="{{route('pesanan.belumDibayar')}}"><li><h2>belum dibayar</h2></li></a>
         <a href="{{route('pesanan.diProses')}}"><li><h2>di proses</h2></li></a>
-        <a href="{{route('pesanan.diKirim')}}"><li><h2>di kirim</h2></li></a>
+        <a href="{{route('pesanan.diKirim')}}"><li class="disini"><h2>di kirim</h2></li></a>
         <a href="{{route('pesanan.diPakai')}}"><li><h2>di pakai</h2></li></a>
         <a href="pesanan-selesai.php">
           <li>
@@ -43,7 +43,6 @@
 
           <hr class="garis">
           <h3 class="alamat">Di Jemput atau Diantar Ke : {{ $data->lokasi }}</h3>
-          <h4>Estimasi waktu Pengambilan atau Pengiriman : {{ $data->waktu }}</h4>
 
         </div>
 

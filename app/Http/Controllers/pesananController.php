@@ -63,6 +63,8 @@ class pesananController extends Controller
 
     function belumDibayar(Request $request)
     {
+        $status = 'belum_dibayar';
+
         // Ambil ID pengguna dari session
         $user = Auth::user();
         $user_id = Auth::id();
@@ -78,11 +80,12 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/pesanan', compact('dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/belum_dibayar', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diProses(Request $request)
     {
+        $status = 'diproses';
         // Ambil ID pengguna dari session
         $user = Auth::user();
         $user_id = Auth::id();
@@ -98,11 +101,12 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/pesanan', compact('dataPesanan', 'dataAda', 'verifikasi'));
+            return view('pesanan/diproses', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diKirim(Request $request)
     {
+        $status = 'dikirim';
         // Ambil ID pengguna dari session
         $user = Auth::user();
         $user_id = Auth::id();
@@ -118,11 +122,12 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/pesanan', compact('dataPesanan', 'dataAda', 'verifikasi'));
+            return view('pesanan/dikirim', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diPakai(Request $request)
     {
+        $status = 'dipakai';
         // Ambil ID pengguna dari session
         $user = Auth::user();
         $user_id = Auth::id();
@@ -138,6 +143,6 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/pesanan', compact('dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/dipakai', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
     }
 }
