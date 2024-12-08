@@ -20,11 +20,7 @@
         <a href="{{route('pesanan.diProses')}}"><li><h2>di proses</h2></li></a>
         <a href="{{route('pesanan.diKirim')}}"><li><h2>di kirim</h2></li></a>
         <a href="{{route('pesanan.diPakai')}}"><li class="disini"><h2>di pakai</h2></li></a>
-        <a href="pesanan-selesai.php">
-          <li>
-            <h2>Riwayat</h2>
-          </li>
-        </a>
+        <a href="{{route('pesanan.riwayat')}}"><li><h2>Riwayat</h2></li></a>
       </ul>
     </div>
 

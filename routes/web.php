@@ -38,6 +38,7 @@ Route::middleware('auth', 'pengguna')->group(function () {
     Route::get('/pesanan/diProses', [pesananController::class, 'diProses'])->name('pesanan.diProses');
     Route::get('/pesanan/diKirim', [pesananController::class, 'diKirim'])->name('pesanan.diKirim');
     Route::get('/pesanan/diPakai', [pesananController::class, 'diPakai'])->name('pesanan.diPakai');
+    Route::get('/pesanan/riwayat', [pesananController::class, 'riwayat'])->name('pesanan.riwayat');
 
     Route::get('/profil', [ProfilController::class, 'checkProfil'])->name('profil.tampil');
     Route::get('/profil/tambah', [ProfilController::class, 'tambah'])->name('profil.tambah');
@@ -68,6 +69,7 @@ Route::middleware('auth', 'admin')->group(function () {
     Route::get('/kendaraan/delete/{id}', [KendaraanController::class, 'delete'])->name('kendaraan.delete');
 
     Route::get('/admin/pesananData', [pesananController::class, 'tampil'])->name('pesanan.data');
+    Route::put('admin/pesanan/updateStatus/{id}', [pesananController::class, 'updateStatus'])->name('pesanan.updateStatus');
 
     Route::get('admin/validasi', [validasiVerif::class, 'index'])->name('validasi.verifikasi');
     Route::get('admin/validasi/{id}', [validasiVerif::class, 'show'])->name('validasi.verifikasi.detail');

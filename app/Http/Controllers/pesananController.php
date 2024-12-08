@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\penggunaVerif;
 use Carbon\Carbon;
-
-
+use Illuminate\Support\Facades\DB;
 
 class pesananController extends Controller
 {
@@ -54,12 +53,41 @@ class pesananController extends Controller
 
     function tampil()
     {
-        $pesanan = Pesanan::get();
         $user_id = Auth::id();
         $dataAda = penggunaVerif::where('user_id', $user_id)->first();
 
-        return view('admin/pesanan/tampil', compact('pesanan', 'dataAda'));
+        $dataPesanan = DB::table('pesanan')
+            ->join('users', 'pesanan.user_id', '=', 'users.id') // Gabungkan tabel users
+            ->join('kendaraan', 'pesanan.kendaraan_id', '=', 'kendaraan.id') // Gabungkan tabel kendaraan
+            ->select(
+                'pesanan.id',
+                'users.name',
+                'kendaraan.nama',
+                'pesanan.biaya',
+                'pesanan.status',
+                'pesanan.tanggal_mulai',
+                'pesanan.tanggal_selesai'
+            )
+            ->get();
+        return view('admin/pesanan/tampil', compact('dataPesanan', 'dataAda'));
     }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $pesanan = Pesanan::findOrFail($id);
+
+        // Validasi status yang dikirimkan
+        $validated = $request->validate([
+            'status' => 'required|in:belum_dibayar,diproses,dikirim,dipakai,selesai',
+        ]);
+
+        // Update status pesanan
+        $pesanan->status = $request->status;
+        $pesanan->save();
+
+        return redirect()->route('pesanan.data')->with('success', 'Status pesanan berhasil diubah');
+    }
+
 
     function belumDibayar(Request $request)
     {
@@ -80,7 +108,7 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/belum_dibayar', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/belum_dibayar', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diProses(Request $request)
@@ -101,7 +129,7 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-            return view('pesanan/diproses', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/diproses', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diKirim(Request $request)
@@ -122,7 +150,7 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-            return view('pesanan/dikirim', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/dikirim', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
 
     function diPakai(Request $request)
@@ -143,6 +171,28 @@ class pesananController extends Controller
             ->with('kendaraan')
             ->get();
 
-        return view('pesanan/dipakai', compact('status','dataPesanan', 'dataAda', 'verifikasi'));
+        return view('pesanan/dipakai', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
+
+    function riwayat(Request $request)
+    {
+        $status = 'riwayat';
+        // Ambil ID pengguna dari session
+        $user = Auth::user();
+        $user_id = Auth::id();
+        $dataAda = penggunaVerif::where('user_id', $user_id)->first();
+
+        $user = Auth::user();
+        $verifikasi = PenggunaVerif::where('user_id', $user->id)->first();
+
+
+        $dataPesanan = Pesanan::where('user_id', $user->id)
+            ->where('status', 'riwayat')
+            ->with('kendaraan')
+            ->get();
+
+        return view('pesanan/riwayat_pesanan', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
+    }
+
+
 }

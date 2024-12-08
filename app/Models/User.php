@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Pesanan;
 
 class User extends Authenticatable
 {
@@ -54,4 +55,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profil::class);
     }
+
+    public function pesanan()
+    {
+        return $this->hasMany(Pesanan::class);
+    }
+
 }

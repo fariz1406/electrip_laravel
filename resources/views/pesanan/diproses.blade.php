@@ -20,11 +20,7 @@
         <a href="{{route('pesanan.diProses')}}"><li class="disini"><h2>di proses</h2></li></a>
         <a href="{{route('pesanan.diKirim')}}"><li><h2>di kirim</h2></li></a>
         <a href="{{route('pesanan.diPakai')}}"><li><h2>di pakai</h2></li></a>
-        <a href="pesanan-selesai.php">
-          <li>
-            <h2>Riwayat</h2>
-          </li>
-        </a>
+        <a href="{{route('pesanan.riwayat')}}"><li><h2>Riwayat</h2></li></a>
       </ul>
     </div>
 
@@ -42,18 +38,12 @@
           <h3>Biaya : RP. {{ $data->biaya }}</h3>
 
           <hr class="garis">
-          <h3 class="alamat">Di Jemput atau Diantar Ke : {{ $data->lokasi }}</h3>
+          <h3 class="alamat">Dikirim pada tanggal {{ \Carbon\Carbon::parse($data->tanggal_mulai)->format('Y-m-d') }} Jam {{ \Carbon\Carbon::parse($data->tanggal_mulai)->format('H:i') }} WIB</h3>
 
         </div>
 
         <br>
 
-        <div class="tombol">
-          <form action=""></form>
-            <a href="">
-            <button type="submit" name="bayar"><b>Bayar Sekarang</b></button></a>
-
-        </div>
 
       </div>
       @endforeach

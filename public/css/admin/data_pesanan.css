@@ -1,58 +1,119 @@
 * {
-  color: white;
+    color: white;
 }
 
 body {
-  background-color: #5b5b5b;
+    background-color: #5b5b5b;
 }
 
 .container {
-  width: 75%;
-  height: auto;
-  z-index: 0;
-  background-color: #5b5b5b;
-  margin-right: 0;
-  margin-left: 25%;
-  text-align: center;
+    width: 75%;
+    height: auto;
+    z-index: 0;
+    background-color: #5b5b5b;
+    margin-right: 0;
+    margin-left: 25%;
+    text-align: center;
 }
 
 table {
-  width: 90%;
-  border-collapse: collapse;
-  color: #ddd;
-  margin-top: 30px;
-  margin-left: 5%;
-  box-shadow: 0px 0px 10px black;
+    width: 95%;
+    border-collapse: collapse;
+    color: #ddd;
+    margin-top: 30px;
+    margin-left: 2.5%;
+    box-shadow: 0px 0px 10px black;
 }
 
-table, th, td {
-  border: 0.5px solid #ddd;
+table,
+th,
+td {
+    border: 0.5px solid #ddd;
 }
 
-th, td {
-  padding: 8px;
-  text-align: center;
-  justify-content: center;
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
 }
 
 th {
-  background-color: #ffcc00;
-  text-shadow: 0px 0px 10px black;
+    background-color: #ffcc00;
+    text-shadow: 0px 0px 10px black;
 }
 
 tr td {
-  text-align: center;
-  text-shadow: 1px 1px 1px black;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
 }
 
-button {
+.material-symbols-outlined:hover {
+    color: #ffcc00;
+}
+
+/* Styling untuk elemen select */
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
   color: black;
-  background-color: #ffcc00;
-  border: 0.5px solid black;
-  border-radius: 10px;
-  padding: 2px;
+}
+
+/* Menambahkan tampilan kustom untuk dropdown */
+select:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+/* Menata background dan menambahkan ikon panah */
+select::-ms-expand {
+  display: none;  /* Hides default dropdown arrow in IE */
+}
+
+select {
+  background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5%22%20fill%3D%22none%22%20stroke%3D%22%23ccc%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Styling untuk setiap option */
+option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+}
+
+/* Styling untuk option saat dipilih */
+option:checked {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Tampilan untuk option disabled */
+option:disabled {
+  color: #aaa;
+  background-color: #f9f9f9;
+}
+
+
+button {
+    color: black;
+    background-color: #ffcc00;
+    border: 0.5px solid black;
+    border-radius: 6px;
+    padding: 5px;
 }
 
 button:hover {
-  background-color: green;
+    background-color: green;
 }
