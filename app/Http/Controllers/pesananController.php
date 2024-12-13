@@ -174,6 +174,26 @@ class pesananController extends Controller
         return view('pesanan/dipakai', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
 
+    public function tambahDurasi(Request $request, $id)
+    {
+        $request->validate([
+            'tanggal_selesai' => 'required|date|after:now', // Validasi datetime harus setelah saat ini
+        ]);
+
+        $pesanan = Pesanan::findOrFail($id);
+
+        // Pastikan tanggal baru lebih besar dari tanggal sebelumnya (tanggal_selesai)
+        if ($request->tanggal_selesai <= $pesanan->tanggal_selesai) {
+            return redirect()->back()->withErrors(['datetime' => 'Tanggal baru harus lebih besar dari tanggal sebelumnya.']);
+        }
+
+        $pesanan->tanggal_selesai = $request->tanggal_selesai; // Update tanggal selesai
+        $pesanan->save();
+
+        return redirect()->back()->with('success', 'Durasi berhasil diperbarui.');
+    }
+
+
     function riwayat(Request $request)
     {
         $status = 'riwayat';
@@ -193,6 +213,4 @@ class pesananController extends Controller
 
         return view('pesanan/riwayat_pesanan', compact('status', 'dataPesanan', 'dataAda', 'verifikasi'));
     }
-
-
 }

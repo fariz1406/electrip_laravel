@@ -87,7 +87,7 @@ ul li {
 .tombol {
   position: relative;
   right: 0;
-  width: 29%;
+  width: 15%;
 }
 
 .tombol button {
@@ -102,6 +102,16 @@ ul li {
   color: white;
 }
 
-.tombol button:hover {
+.tombol .done {
   background-color: green;
+}
+
+.tombol button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.tombol .done:hover {
+  background-color: black;
+  color: white;
 }

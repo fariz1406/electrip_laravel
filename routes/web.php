@@ -38,6 +38,7 @@ Route::middleware('auth', 'pengguna')->group(function () {
     Route::get('/pesanan/diProses', [pesananController::class, 'diProses'])->name('pesanan.diProses');
     Route::get('/pesanan/diKirim', [pesananController::class, 'diKirim'])->name('pesanan.diKirim');
     Route::get('/pesanan/diPakai', [pesananController::class, 'diPakai'])->name('pesanan.diPakai');
+    Route::put('/pesanan/tambahDurasi/{id}', [PesananController::class, 'tambahDurasi'])->name('pesanan.tambahDurasi');
     Route::get('/pesanan/riwayat', [pesananController::class, 'riwayat'])->name('pesanan.riwayat');
 
     Route::get('/profil', [ProfilController::class, 'checkProfil'])->name('profil.tampil');
