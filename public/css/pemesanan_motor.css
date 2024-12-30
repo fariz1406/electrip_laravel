@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  
+}
+
+.wrap{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.wrap ul {
+  display: flex;
+  gap: 50px;  
+}
+
+.wrap ul li {
+  font-size: 4.5vh;
+  list-style-type: none;
+}
+
+.wrap ul li a{
+  text-decoration: none;
+  font-family: "Montserrat Alternates", fantasy;
+  color: black;
+}
+
+.wrap ul li a:hover {
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px #ffcc00;
+}
+
+.wrap ul li a:active {
+  text-decoration: underline;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.box1 {
+  width: 135px;
+  height: 40px;
+  left: 180px;
+  top: 430px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #8c8c8c;
+  border: 1px solid black;
+  display: flex;
+  place-items: center;
+  margin-right: 0;
+  text-decoration: none;
+}
+
+.box1 img {
+  right: 295px;
+  bottom: 30px;
+  width: 30px;
+}
+
+.box1 p{
+  color: black;
+  font-size: 23px;
+  
+}
+.lokasi .box1:hover {
+  background-color: #edede2;
+}
+
+  .wrapper1 {
+    width: 80%;
+    height: auto;
+    background-color: #d9d9d9;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    padding: 20px 0 20px 0;
+  }
+
+  .wrapper2 {
+    width: 100%;
+    height: 300px;
+    border-radius: 25px;
+    background-color: #ffcc00;
+  }
+  .wrapper1 .wrapper2 img {
+    width: 30%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 23px;
+    margin-right: 10px;
+  }
+  .wrapper1 .wrapper2 h3 {
+    font-family: "Trebuchet MS";
+    text-align: center;
+    margin-top: -285px;
+    padding-left: 87px;
+    font-size: 37px;
+  }
+  .wrapper1 .wrapper2 h4 {
+    font-family: "Trebuchet MS";
+    text-align: center;
+    font-size: 18px;
+    margin-left: -95px;
+    margin-top: -25px;
+  }
+  .wrapper2 .lokasi {
+    width: 26%;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin: 25px 10px 15px 10px;
+    border-radius: 12px;
+    margin-left: 348px;
+  }
+  .wrapper2 .lokasi img {
+    width: 18px;
+    height: 24px;
+    margin-left: 5px;
+    padding: 1.5px;
+    padding-top: 3px;
+}
+  
+  .wrapper2 .lokasi p {
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    margin-left: 33px;
+    margin-top: -30px;
+    color: #000000;
+  }
+  .wrapper2 .lokasi:hover {
+    background-color: #eae9e9;
+  }
+  .wrapper2 .waktu {
+    width: 26%;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin: 25px 10px 15px 10px;
+    border-radius: 12px;
+    margin-left: 348px;
+  }
+  .wrapper2 .waktu img {
+    width: 22px;
+    height: 23px;
+    margin-left: 5px;
+    padding: 1.5px;
+    padding-top: 3px;
+  }
+  
+  .wrapper2 .waktu p {
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    margin-left: 35px;
+    margin-top: -30px;
+    color: #000000;
+  }
+  .wrapper2 .waktu:hover {
+    background-color: #eae9e9;
+  }
+  .time-picker {
+    display: none;
+    position: absolute; /* Menambahkan ini */
+    width: 25%;
+    height: 25%; /* Sesuaikan ini sesuai dengan kebutuhan */
+    background-color: #d9d9d9;
+    border: 1px solid #000000;
+    top: 200px; /* Atur sesuai dengan kebutuhan */
+    left: 29%; /* Atur sesuai dengan kebutuhan */
+    padding-top: 0; /* Sesuaikan ini jika diperlukan */
+    z-index: 10; /* Pastikan ini cukup tinggi untuk menutupi elemen di bawahnya */
+    border-radius: 14px;
+    transition: max-height 0.5s, opacity 0.5s ease-in-out;
+  
+  }
+  
+  .time-picker .tanggal {
+    width: 40%;
+    margin: 13px;
+    height: 30px;
+    padding: 5px;
+    color: #7A7A7A;
+    text-transform:uppercase;
+    font-size: 13px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
+  .time-picker .jam {
+    width: 40%;
+    margin: 0px 13px;
+    height: 30px;
+    padding: 5px;
+    color: #7A7A7A;
+    font-size: 15px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+  }
+  .time-picker .tombol1 {
+    width: 65px;
+    margin: 10px;
+    margin-left: 70%;
+    height: 35px;
+    background-color: #ffcc00;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .time-picker .tombol1:hover {
+    background-color: #e4b807;
+  }
+  .Button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    margin-bottom: -20px;
+    margin-left: 65%;
+    gap: 5%;
+    align-items: end;
+  }
+  
+  .Button .simpan {
+    background-color: #ffffff;
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+    color: #0c0c0c;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .Button .batal {
+    background-color: #ffcc00;
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+    color: #0c0c0c;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .Button .simpan:hover {
+    background-color: #f2eded;
+  }
+  .Button .batal:hover {
+    background-color: #ffcc00;
+  }
+
+  .Deskripsi h3{
+    font-size: 2rem;
+    padding: 2px 5px 5px 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .Deskripsi p {
+    margin-left: 20px;
+    margin-top: -18px;
+    text-align: justify;
+    margin-right: 30px;
+    font-size: 22px;
+  }
+  
+  .Deskripsi span {
+    color: #0011ff;
+  }

@@ -1,0 +1,689 @@
+* {
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.wrapper {
+  width: 80%;
+  height: auto; /* Mengubah dari 400px menjadi auto untuk fleksibilitas */
+  background-color: #d9d9d9;
+  margin-top: 80px;
+  margin-left: auto; /* Tengah secara otomatis */
+  margin-right: auto; /* Tengah secara otomatis */
+  border-radius: 20px;
+  padding: 20px 0 10px 0; /* Penambahan padding */
+}
+
+.wrapper h2 {
+  color: #ffcc00;
+  font-size: 30px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 15px; /* Padding bawah ditambahkan untuk memberi ruang sebelum garis pemisah */
+}
+
+.baris ul {
+  list-style-type: none;
+  padding: 20px 0; /* Tambah padding atas dan bawah */
+  text-align: center; /* Memusatkan link */
+}
+
+.baris ul li {
+  display: inline;
+  margin-right: 80px; /* Margin antar item */
+}
+
+.baris ul li a {
+  color: #000000;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+.baris ul li a:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.garis {
+  width: 100%;
+  height: 1px; /* Koreksi unit dan ketebalan */
+  background-color: #000;
+  margin-top: 15px; /* Tambah margin atas */
+  margin-bottom: 30px; /* Tambah margin bawah */
+}
+.bungkusan .kotak1 {
+  width: 400px;
+  height: 180px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+}
+
+.bungkusan .kotak2 {
+  width: 185px;
+  height: 180px;
+  background-color: #ffcc00;
+  border-radius: 15px;
+  display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+  justify-content: center; /* Menyelaraskan horizontal */
+  align-items: center; /* Menyelaraskan vertikal */
+  position: relative; /* Posisi relatif untuk posisi absolut anak */
+}
+
+.bungkusan .kotak2 img {
+  width: 160px; /* Lebar gambar */
+  border-radius: 15px; /* Bulatkan tepi gambar */
+}
+/* Mengatur tampilan keseluruhan */
+.bungkusan {
+  display: flex; /* Memastikan kontainer eksternal menggunakan flexbox */
+  justify-content: center; /* Menyelaraskan semua item di tengah secara horizontal */
+  align-items: center; /* Menyelaraskan semua item di tengah secara vertikal */
+  padding: 0px; /* Menambahkan padding untuk estetika */
+}
+
+/* Mengatur tampilan bungkus1 dan kotak1 */
+.bungkus1 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari bungkus1 */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+ .bungkus3 .kotak1 {
+  width: 400px;
+  height: 180px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+}
+
+ .bungkus3 .kotak2 {
+  width: 185px;
+  height: 180px;
+  background-color: #ffcc00;
+  border-radius: 15px;
+  display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+  justify-content: center; /* Menyelaraskan horizontal */
+  align-items: center; /* Menyelaraskan vertikal */
+  position: relative; /* Posisi relatif untuk posisi absolut anak */
+}
+
+.bungkusan1 .kotak2 img {
+  width: 160px; /* Lebar gambar */
+  border-radius: 15px; /* Bulatkan tepi gambar */
+}
+
+
+/* Mengatur tampilan bungkus1 dan kotak1 */
+.bungkus3 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus4 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus4 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+.bungkusan1 {
+    display: flex; /* Memastikan kontainer eksternal menggunakan flexbox */
+    justify-content: center; /* Menyelaraskan semua item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan semua item di tengah secara vertikal */
+    padding: 0px; /* Menambahkan padding untuk estetika */
+  }
+
+.input-container2 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container2 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container2 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+ .bungkus4 .kotak1 {
+  width: 400px;
+  height: 180px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+}
+
+ .bungkus4 .kotak2 {
+  width: 185px;
+  height: 180px;
+  background-color: #ffcc00;
+  border-radius: 15px;
+  display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+  justify-content: center; /* Menyelaraskan horizontal */
+  align-items: center; /* Menyelaraskan vertikal */
+  position: relative; /* Posisi relatif untuk posisi absolut anak */
+}
+
+.bungkusan1 .kotak2 img {
+  width: 160px; /* Lebar gambar */
+  border-radius: 15px; /* Bulatkan tepi gambar */
+}
+/* Mengatur tampilan keseluruhan */
+
+
+/* Mengatur tampilan bungkus1 dan kotak1 */
+.bungkus4 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus4 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus4 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.kotak4 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+
+.input-container3 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container3 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container3 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+.bungkus2 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus2 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus2 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+
+.input-container1 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container1 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container1 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+
+.bungkusan2 {
+    display: flex; /* Memastikan kontainer eksternal menggunakan flexbox */
+    justify-content: center; /* Menyelaraskan semua item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan semua item di tengah secara vertikal */
+    padding: 0px; /* Menambahkan padding untuk estetika */
+  }
+.bungkus5 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus5 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus5 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.bungkus5 .kotak1 {
+    width: 400px;
+    height: 180px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+  }
+  
+  .bungkusan2 .bungkus5 .kotak2 {
+    width: 185px;
+    height: 180px;
+    background-color: #ffcc00;
+    border-radius: 15px;
+    display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+    justify-content: center; /* Menyelaraskan horizontal */
+    align-items: center; /* Menyelaraskan vertikal */
+    position: relative; /* Posisi relatif untuk posisi absolut anak */
+  }
+  .bungkusan2 .kotak2 img {
+    width: 160px; /* Lebar gambar */
+    border-radius: 15px; /* Bulatkan tepi gambar */
+  }
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+.input-container4 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container4 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container4 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+
+  
+.bungkus6 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus6 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus6 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.bungkus6 .kotak1 {
+    width: 400px;
+    height: 180px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+  }
+  
+  .bungkusan2 .bungkus6 .kotak2 {
+    width: 185px;
+    height: 180px;
+    background-color: #ffcc00;
+    border-radius: 15px;
+    display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+    justify-content: center; /* Menyelaraskan horizontal */
+    align-items: center; /* Menyelaraskan vertikal */
+    position: relative; /* Posisi relatif untuk posisi absolut anak */
+  }
+  .bungkusan2 .kotak2 img {
+    width: 160px; /* Lebar gambar */
+    border-radius: 15px; /* Bulatkan tepi gambar */
+  }
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+.input-container5 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container5 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container5 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+
+.wrapper1 {
+    display: flex; /* Memastikan kontainer eksternal menggunakan flexbox */
+    justify-content: center; /* Menyelaraskan semua item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan semua item di tengah secara vertikal */
+    padding: 0px; /* Menambahkan padding untuk estetika */
+  }
+
+.bungkus7 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus7 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus7 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.bungkus7 .kotak1 {
+    width: 400px;
+    height: 180px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+  }
+  
+.bungkus7 .kotak2 {
+    width: 185px;
+    height: 180px;
+    background-color: #ffcc00;
+    border-radius: 15px;
+    display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+    justify-content: center; /* Menyelaraskan horizontal */
+    align-items: center; /* Menyelaraskan vertikal */
+    position: relative; /* Posisi relatif untuk posisi absolut anak */
+  }
+  .wrapper1 .kotak2 img {
+    width: 160px; /* Lebar gambar */
+    border-radius: 15px; /* Bulatkan tepi gambar */
+  }
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+.input-container6 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container6 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container6 span {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container6 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+.wrapper2 {
+    display: flex; /* Memastikan kontainer eksternal menggunakan flexbox */
+    justify-content: center; /* Menyelaraskan semua item di tengah secara horizontal */
+    align-items: center; /* Menyelaraskan semua item di tengah secara vertikal */
+    padding: 0px; /* Menambahkan padding untuk estetika */
+  }
+
+.bungkus8 {
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Menyusun anak-anak secara vertikal */
+  width: 100%; /* Menggunakan lebar penuh dari kontainer induknya */
+}
+
+.bungkus8 .kotak1 {
+  display: flex; /* Memastikan bahwa kotak1 juga menggunakan flexbox */
+  align-items: center; /* Menyelaraskan anak-anak di tengah secara vertikal */
+  margin-bottom: 20px; /* Memberikan ruang di bawah kotak1 */
+}
+
+.bungkus8 .kotak2 {
+  flex-shrink: 0; /* Mencegah kotak2 mengerut */
+  margin-right: 10px; /* Memberikan ruang antara gambar dan input teks */
+}
+
+.bungkus8 .kotak1 {
+    width: 400px;
+    height: 180px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+    overflow: hidden; /* Menyembunyikan bagian luar dari konten anak jika berada di luar batas */
+  }
+  
+.bungkus8 .kotak2 {
+    width: 185px;
+    height: 180px;
+    background-color: #ffcc00;
+    border-radius: 15px;
+    display: flex; /* Menggunakan flexbox untuk menyelaraskan isi */
+    justify-content: center; /* Menyelaraskan horizontal */
+    align-items: center; /* Menyelaraskan vertikal */
+    position: relative; /* Posisi relatif untuk posisi absolut anak */
+  }
+  .wrapper2 .kotak2 img {
+    width: 160px; /* Lebar gambar */
+    border-radius: 15px; /* Bulatkan tepi gambar */
+  }
+.kotak2 img {
+  display: block; /* Menghapus ruang bawah default pada gambar */
+  width: 200px; /* Mengatur lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 10px; /* Memberikan tepi bulat pada gambar */
+}
+
+.input-container7 {
+    display: flex;
+    flex-direction: column; /* Mengatur anak-anak secara vertikal */
+    margin-left: 10px; /* Margin kiri dari gambar */
+    margin-top: -15px;
+}
+
+.input-container7 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container7 span {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 11px; /* Ukuran font yang lebih besar dan mudah dibaca */
+}
+.input-container7 p {
+    width: 130px; /* Lebar input disesuaikan dengan container */
+    padding: 5px;
+    margin-top: 11px; /* Memberikan jarak antara input */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 11px; 
+}
+.tab-links.active-tabs {
+    text-decoration: underline; /* Menambahkan underline pada tab aktif */
+    color: #ffcc00; /* Mengubah warna teks menjadi hitam atau warna lain sesuai keinginan */
+    font-weight: bold; /* Opsi untuk membuat teks lebih tebal */
+}
+.tab-contents {
+    display: none; /* Sembunyikan semua tab content secara default */
+}
+
+.tab-contents.active-tabs {
+    display: block; /* Hanya tampilkan tab yang aktif */
+}
+.tab-links.active-tabs {
+    text-decoration: underline;
+    color: #ffcc00;
+    font-weight: bold;
+}

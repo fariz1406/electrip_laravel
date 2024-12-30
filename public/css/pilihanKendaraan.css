@@ -1,0 +1,232 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+
+}
+
+body {
+  background-color: #121212;
+}
+
+.pencarian {
+  margin-top: 75px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.pencarian input {
+  height: 40px;
+  width: 220px;
+  padding-left: 10px;
+  border: 2px solid white;
+  background-color: #121212;
+  border-radius: 15px;
+  color: white;
+}
+
+.pencarian button{
+  width: 50px;
+  margin-right: 20px;
+  background-color: #121212;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.pencarian button:hover {
+  background-color: #ffcc00;
+}
+
+.pencarian button:active {
+  background-color: black;
+}
+
+.material-symbols-outlined{
+  font-size: 20px;
+  color: white;
+}
+
+.wrap{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.wrap ul {
+  display: flex;
+  gap: 50px;  
+}
+
+.wrap ul li {
+  font-size: 4.5vh;
+  list-style-type: none;
+}
+
+.aktif-sekarang{
+  text-decoration: underline;
+  color: white;
+}
+
+.wrap ul li a{
+  text-decoration: none;
+  font-family: "Montserrat Alternates", fantasy;
+  color: white;
+}
+
+.wrap ul li a:hover {
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px #ffcc00;
+}
+
+.wrap ul li a:active {
+  text-decoration: underline;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.box1 {
+  width: 135px;
+  height: 40px;
+  left: 180px;
+  top: 430px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #8c8c8c;
+  border: 1px solid black;
+  display: flex;
+  place-items: center;
+  margin-right: 0;
+  text-decoration: none;
+}
+
+.box1 img {
+  right: 295px;
+  bottom: 30px;
+  width: 30px;
+}
+
+.box1 p{
+  color: black;
+  font-size: 23px;
+  
+}
+.lokasi .box1:hover {
+  background-color: #edede2;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+/* batas konten bagian atas ( pilihan kendaraan, lokasi) */
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #ffcc00;
+  height: 460px;
+  margin: 15px;
+  border-radius: 30px;
+  border: 1px solid black;
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 4px 8px black; 
+  gap: 20px;
+}
+
+.image-box {
+  height: 280px;
+  width: 350px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.card .teks {
+  display: block;
+  position: relative;
+  justify-content: baseline;
+  text-align: left;
+  font-size: 2.5vh;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
+.text-harga{
+  
+}
+
+.text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+/* button */
+.button-wrapper{
+  margin-top: 18px;
+  display: flex;
+  justify-content: end;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+
+.detail {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  transition: all .3s ease;
+  
+}
+
+.detail:hover{
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all .3s ease;  
+}
+
+.beli {
+  background: black;
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .3s ease; 
+  margin-left: 10px;
+}
+
+.beli:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;    
+}
+/* batas button */
